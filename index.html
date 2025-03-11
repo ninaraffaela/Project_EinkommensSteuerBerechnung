@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,8 +6,42 @@
     <title>Project EinkommensSteuerBerechnung - Team MinaNina</title>
   </head>
   <body>
-    <h1>Project EinkommensSteuerBerechnung -  🍀👾MinaNina</h1>
-    
+    <h1>Project EinkommensSteuerBerechnung - 🍀👾MinaNina</h1>
+    <form action="">
+      <div>
+        <input
+          type="radio"
+          name="Jahresauswahl"
+          id="Jahresauswahl"
+          value="2023"
+        />2023
+        <input
+          type="radio"
+          name="Jahresauswahl"
+          id="Jahresauswahl"
+          value="2024"
+        />2024
+      </div>
+      <div>
+        <input type="radio" name="Personenanzahl" value="Grundtarif" />
+        eine Person
+        <input type="radio" name="Personenanzahl" value="Spittingtarif" />zwei
+        Personen
+      </div>
+      <input
+        type="number"
+        class="user-input1"
+        placeholder="Einkommen Person 1"
+      />
+      <input
+        type="number"
+        class="hidden, user-input2"
+        placeholder="Einkommen Person 2"
+      />
+      <input type="submit" value="calculate" />
+    </form>
+
+    <div class="output-area"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
