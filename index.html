@@ -4,44 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project EinkommensSteuerBerechnung - Team MinaNina</title>
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <h1>Project EinkommensSteuerBerechnung - 🍀👾MinaNina</h1>
     <form action="">
-      <div>
-        <input
-          type="radio"
-          name="Jahresauswahl"
-          id="Jahresauswahl"
-          value="2023"
-        />2023
-        <input
-          type="radio"
-          name="Jahresauswahl"
-          id="Jahresauswahl"
-          value="2024"
-        />2024
+      <div id="jahres-auswahl">
+        <div class="2023">
+          <input 
+          type="radio" 
+          name="Jahresauswahl" 
+          value="2023" 
+          id="2023" />
+          <label for="2023">2023</label>
+        </div>
+
+        <div class="2024">
+          <input 
+          type="radio" 
+          name="Jahresauswahl" 
+          checked value="2024" 
+          id="2024" />
+          <label for="2024">2024</label>
+        </div>
       </div>
-      <div>
-        <input type="radio" name="Personenanzahl" value="Grundtarif" />
-        eine Person
-        <input type="radio" name="Personenanzahl" value="Spittingtarif" />zwei
-        Personen
+
+      <div id="personen-anzahl">
+        <div class="one-person">
+          <input
+            type="radio"
+            name="Personenanzahl"
+            checked value="Grundtarif"
+            id="rb-1person"
+          />
+          <label for="eine-person">eine Person</label>
+        </div>
+
+        <div class="two-persons">
+          <input 
+          type="radio" 
+          name="Personenanzahl" 
+          value="Spittingtarif"
+          id="rb-2persons" 
+          />
+          <label for="zwei-personen">zwei Personen</label>
+        </div>
       </div>
-      <input
+
+      <input class="user-input1"
         type="number"
-        class="user-input1"
         placeholder="Einkommen Person 1"
       />
-      <input
+
+      <input class="hidden user-input2"
         type="number"
-        class="hidden, user-input2"
         placeholder="Einkommen Person 2"
       />
-      <input type="submit" value="calculate" />
+
+      <input class="submit-btn" 
+      type="submit" 
+      value="calculate" />
     </form>
 
-    <div class="output-area"></div>
+    <div class="hidden output-area">
+      <p>Ihr zu versteuerndes Einkommen  X.
+      </p>
+      <p>Ihre Einkommenssteuer beträgt Y.</p>
+      <img src="./src/assets/img/anditsgone.jpg" alt="anditsgone">
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
