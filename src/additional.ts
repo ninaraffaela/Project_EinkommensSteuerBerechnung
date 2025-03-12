@@ -30,7 +30,6 @@ form?.addEventListener("submit", calculateTaxableIncome );
 function calculateTaxableIncome(event: Event) {
     event.preventDefault();
     console.log("geht");
-    unlockOutput();
 }
 
 function unlockOutput() {
