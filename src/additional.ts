@@ -30,11 +30,10 @@ form?.addEventListener("submit", calculateTaxableIncome );
 function calculateTaxableIncome(event: Event) {
     event.preventDefault();
     console.log("geht");
-    if (output) {
-        output.classList.remove("hidden");
-        
-
-    }
-    
 }
 
+function unlockOutput() {
+    if (output) {
+        output.classList.remove("hidden");
+    }
+}
